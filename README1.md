@@ -3,8 +3,8 @@
 Este documento explica los pasos para:
 
 1. Ejecutar PostgreSQL en Docker
-2. Configurar la conexión en DataGrip(en mi caso lo hice en visual estudio code)
-3. Crear una base de datos desde DataGrip(en mi caso lo hice en visual estudio code)
+2. Configurar la conexión en DataGrip
+3. Crear una base de datos desde DataGrip
 
 ---
 
@@ -12,9 +12,9 @@ Este documento explica los pasos para:
 
 Para iniciar un contenedor de PostgreSQL con Docker, se ejecuta en la terminal:
 bash
-docker run --name postgres-db -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres
+docker run --name postgres -e POSTGRES_PASSWORD=1234 -p 5432:5432 -d postgres
 
---name postgres-db → Nombre del contenedor.
+--name postgres → Nombre del contenedor.
 
 -e POSTGRES_PASSWORD=1234 → Contraseña del usuario postgres.
 
@@ -26,8 +26,8 @@ Para verificar que el contenedor está corriendo:
 docker ps
 2️⃣ Configurar conexión en visual estudio code
 Abrir vsc
-precionar ctrl+shift+p
-y presionar new conection
+precionar el simbolo +
+y presionar data source
 seleccionar PostgreSQL.
 
 Completar los campos:
@@ -44,13 +44,8 @@ Database: postgres (base de datos por defecto)
 
 Hacer clic en Test Connection para verificar.
 
-Si todo es correcto, presionar OK.
+Si todo es correcto, presionar guardar coneccion.
 
-Abrir una nueva consola SQL (clic derecho sobre la conexión > New > SQL Console).
-
-Ejecutar el comando:
-
-CREATE DATABASE prueba_vs_code;
-Refrescar la lista de bases de datos (clic derecho sobre la conexión > Refresh).
-
-La nueva base de datos prueba_vs_code estará disponible para usar.
+Abrir una nueva consola SQL (clic derecho sobre la conexión > New > Query Console).
+La nueva base de datos postgres estará disponible para usar.
+y esta lista para ejecutar codigo SQL
