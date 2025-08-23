@@ -1,21 +1,21 @@
-Entidad: Vehículo
-•	Atributos:
-o	numero_serie (INT, LLAVE PRIMARIA)
-o	modelo (VARCHAR)
-o	marca (VARCHAR)
-o	anio_fabricacion (INT)
-o	velocidad_max (INTEGER CHECK)
-o	precio_declarado (DECIMAL)
+* Entidad: Vehículo
+	Atributos:
+	numero_serie (INT, LLAVE PRIMARIA)
+    modelo (VARCHAR)
+	marca (VARCHAR)
+	anio_fabricacion (INT)
+	velocidad_max (INTEGER CHECK)
+	precio_declarado (DECIMAL)
 
-Entidad: Lote de Importación
-•	Atributos:
-o	lote_id (INT, LLAVE PRIMARIA)
-o	fecha_llegada (DATE)
-o	pais_origen (VARCHAR)
+* Entidad: Lote de Importación
+	Atributos:
+	lote_id (INT, LLAVE PRIMARIA)
+	fecha_llegada (DATE)
+	pais_origen (VARCHAR)
 
-🔹 Entidad: Concesionario
-•	Atributos:
-o	concesionario_id (INT, LLAVE PRIMARIA)
-o	nombre_comercial (VARCHAR)
-o	direccion (VARCHAR)
-o	persona_contacto (VARCHAR)
+*  Entidad: Concesionario
+	Atributos:
+	concesionario_id (INT, LLAVE PRIMARIA)
+	nombre_comercial (VARCHAR)
+	direccion (VARCHAR)
+	persona_contacto (VARCHAR)
